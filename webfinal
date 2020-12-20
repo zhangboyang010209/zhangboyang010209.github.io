@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>煎饼果子 </title>
+<style>
+* {
+        margin:0;
+         padding:0;
+     } 
+body { 
+    background:#fff;
+    margin:0px;
+    font-family:"Microsoft Yahei","微软雅黑",Verdana;
+    font-size:12px;
+    color: #555;
+    min-width:1000px;
+}
+ul {
+    list-style:none;
+}
+img {
+    border:none;
+}
+TD { 
+    COLOR: #000; 
+    FONT-SIZE: 13px;}
+a{
+     color:#999;
+     text-decoration: none;}
+a:hover{ 
+    color:#c60000;
+}
+input:focus {outline:none;}
+.fl {
+    float:left;
+}
+.fr {float:right;}
+hr {
+    border-bottom:1px dotted #ccc;
+    background:none
+    ;border-top:none;
+    border-left:none;
+    border-right:none;
+    clear:both;
+    margin:10px 0;}
+.clearfloat {
+    clear:both;
+    height:0px;
+    font-size:1px;
+    line-height:0px;
+}
+.space_10px {
+    clear:both;
+    height:10px;
+}
+.space_20px {
+    clear:both;
+    height:20px;
+}
+.wrap {
+    width:100%;
+    margin:0;
+ }
+.bg1 {
+    background:url("../images/bg1.jpg");
+    overflow:hidden;
+}
+.bg2 {
+    background:url("../images/bg2.jpg");
+    overflow:hidden;
+}
+
+.header {
+    width:980px;
+    height:107px;
+    margin:0 auto;
+    background:url("../images/header.jpg");
+    position:relative;
+}
+.top-date {
+	position:absolute;
+	width:190px;
+	height:30px;
+	right:30px;top:10px;
+	font-size:12px;
+}
+.search {
+    width:150px;
+    position:absolute;
+    right:55px;
+    top:45px;
+}
+.search-keyword {
+    width:124px;
+    height:24px;
+    line-height:24px;
+    float:left; 
+    background:none;
+     border:none; 
+     color:#ccc;
+     font-family:arial;
+    }
+.search-submit {
+    cursor:pointer;
+     width:25px; 
+     height:24px; 
+     display:block;
+      border:none; 
+      background:none; 
+      float:right;
+    }
+
+
+.nav_box {
+    width:100%;
+    height:48px;
+    background:#7d7976;
+}
+.nav {
+    width:980px;
+    height:48px;
+    margin:0 auto;
+    background:#4d4d4d;
+}
+.nav ul {
+    margin:0;
+    padding:0 0 0 50px;
+}
+.nav ul li {
+    height:48px;
+    float:left;
+    margin:0;
+    position:relative;
+    font-size:15px;
+}
+.nav ul li a {
+    display:block;
+    width:145px;
+    height:45px;
+    line-height:45px;
+    color:#eee;
+    text-align:center;
+}
+.nav ul li a:hover {
+    color:#ff0000
+}
+.nav ul .ge {
+    width:2px;
+    height:48px;
+    background:url("../images/ge.jpg") 0 50% no-repeat;
+}
+
+
+.banner_box {
+    width:980px;height:463px;margin:0 auto;
+}
+#box {
+ position:relative;
+ width:980px;
+ height:463px;
+}
+#box .imgList{
+ position:relative;
+ width:980px;
+ height:463px;
+ overflow:hidden;
+}
+#box .imgList li{
+ position:absolute;
+ top:0;
+ left:0;
+ width:980px;
+ height:463px;
+}
+#box .countNum{
+ position:absolute;
+ right:0;
+ bottom:5px;
+}
+#box .countNum li{
+ width:20px;
+ height:20px;
+ float:left;
+ color:#fff;
+ border-radius:20px;
+ background:#f90;
+ text-align:center;
+ margin-right:5px;
+ cursor:pointer;
+ opacity:0.7;
+ filter:alpha(opacity=70);
+}
+#box .countNum li.current{
+ background:#f60;
+ font-weight:bold;
+ opacity:1;
+ filter:alpha(opacity=70);
+}
+
+
+.wrap_box {
+    width:900px;
+    height:257px;
+    margin:0 auto;
+    padding:25px 55px;
+    background:url("../images/bg3.jpg");
+}
+.pubtit {
+    width:100%;
+    height:41px;
+    line-height:41px;
+    border-bottom:1px solid #ddd;
+    margin:0 0 12px 0;
+}
+.pubtit span {
+    font-size:16px;
+    color:#999;
+}
+.pubtit a {
+    display:block;
+    width:12px;
+    height:14px;
+    background:url("../images/more.jpg");
+    float:right;margin:10px 0 0 0;
+}
+
+.art_box {
+    width:260px;
+}
+.art_box p {
+    text-align:center;
+    line-height:2;
+}
+
+.news_box {
+    width:260px;
+    height:46px;
+    margin:0 0 10px 0;
+    clear:both;}
+.news_box .date {
+    float:left;
+    width:56px;
+    height:40px;
+    border-right:1px dotted #ccc;
+    padding-top:6px;
+    line-height:1.5;
+    font-family:Georgia;
+    text-align:center;}
+.news_box .news {
+    float:right;
+    width:185px;
+    height:40px;
+    padding-top:6px;
+    line-height:1.5;
+}
+
+
+.footer {
+    width:100%;
+    height:177px;
+    margin:0;
+    background:url("../images/footbg.jpg");
+}
+.foot{ 
+    width:980px;
+    height:147px; 
+    margin:0 auto;
+    padding-top:30px;
+    background:#383838;}
+.footnav {
+    height:45px;
+    line-height:45px;
+    font-size:14px;
+    text-align:center;
+}
+.footnav a {
+    color:#999;
+    text-decoration:underline;
+    padding:0 40px;
+}
+.foot p {
+    color:#666;
+    line-height:2;
+    padding:10px 110px;
+}
+
+
+#toTop {
+	display: none;
+	text-decoration: none;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	overflow: hidden;
+	width: 32px;
+	height: 32px;
+	border: none;
+	text-indent: 100%;
+	background: url("../images/move.jpg") no-repeat right top;
+}
+</style>
+<script>
+function runImg(){}
+    runImg.prototype={
+     bigbox:null,
+     boxul:null,
+     imglist:null,
+     numlist:null,
+     prov:0,
+     index:0,
+     timer:null,
+     play:null,
+     imgurl:[],
+     count:0,
+     $:function(obj)
+     {
+      if(typeof(obj)=="string")
+      {
+       if(obj.indexOf("#")>=0)
+       {
+        obj=obj.replace("#","");
+        if(document.getElementById(obj))
+        {
+         return document.getElementById(obj);
+        }
+        else
+        {
+         alert(""+obj);
+         return null;
+        } 
+       }
+       else
+       {
+        return document.createElement(obj);
+       }
+      }
+      else
+      {
+       return obj;
+      }
+     },
+     //初始化
+     info:function(id)
+     {
+      this.count=this.count<=5?this.count:5;
+      this.bigbox=this.$(id);
+      for(var i=0;i<2;i++)
+      {
+       var ul=this.$("ul");
+       for(var j=1;j<=this.count;j++)
+       {
+        var li=this.$("li");
+        li.innerHTML=i==0?this.imgurl[j-1]:j;
+        ul.appendChild(li);
+       }
+       this.bigbox.appendChild(ul);
+      }
+      this.boxul=this.bigbox.getElementsByTagName("ul");
+      this.boxul[0].className="imgList";
+      this.boxul[1].className="countNum";
+      this.imglist=this.boxul[0].getElementsByTagName("li");
+      this.numlist=this.boxul[1].getElementsByTagName("li");
+      for(var j=0;j<this.imglist.length;j++)
+      {
+       this.alpha(j,0);
+      }
+      this.alpha(0,100);
+      this.numlist[0].className="current";
+     },
+     //封装程序入口
+     action:function(id)
+     {
+      this.autoplay();
+      this.mouseoverout(this.bigbox,this.numlist);
+     },
+     //图片切换效果
+     imgshow:function(num,numlist,imglist)
+     {
+      this.index=num;
+      var pralpha=100;
+      var inalpha=0;
+      for(var i=0;i<numlist.length;i++)
+      {
+       numlist[i].className="";
+      }
+      numlist[this.index].className="current";
+      clearInterval(this.timer);
+         for(var j=0;j<this.imglist.length;j++)
+             {
+              this.alpha(j,0);
+             }
+      this.alpha(this.prov,100);
+      this.alpha(this.index,0);
+      var $this=this;
+      this.timer=setInterval(function(){
+       inalpha+=2;
+       pralpha-=2;
+       if(inalpha>100){inalpha=100};//不能大于100
+       if(pralpha<0){pralpha=100};
+       $this.alpha($this.prov,pralpha);
+       $this.alpha($this.index,inalpha);
+       if(inalpha==100&&pralpha==0){clearInterval($this.timer)};//当等于100的时候就切换完成了
+      },20)
+     },
+     alpha:function(i,opacity){
+      this.imglist[i].style.opacity=opacity/100;
+      this.imglist[i].style.filter="alpha(opacity="+opacity+")";
+     },
+     //自动播放
+     autoplay:function(){
+      var $this=this;
+      this.play=setInterval(function(){
+       $this.prov=$this.index;
+       $this.index++;
+       if($this.index>$this.imglist.length-1){$this.index=0};
+       $this.imgshow($this.index,$this.numlist,$this.imglist);
+       },2000)
+     },
+     //处理鼠标事件
+     mouseoverout:function(box,numlist)
+     {
+      var $this=this;
+      box.onmouseover=function()
+      {
+       clearInterval($this.play);
+      }
+      box.onmouseout=function()
+      {
+       $this.autoplay($this.index);
+      }
+      for(var i=0;i<numlist.length;i++)
+      {
+       numlist[i].index=i;
+       numlist[i].onmouseover=function(){
+        $this.prov=$this.index;
+        $this.imgshow(this.index,$this.numlist,$this.imglist);
+       }
+      }
+     }
+    }
+    window.onload=function(){
+     var runimg=new runImg();
+     runimg.count=3;
+     runimg.imgurl=[
+     "<img src=\"images/01.jpg\"/>",
+     "<img src=\"images/02.jpg\"/>",
+     "<img src=\"images/03.jpg\"/>",
+     "<img src=\"images/04.jpg\"/>"];
+     runimg.info("#box");
+     runimg.action("#box");
+    }
+   //点击搜索时的点击事件
+     function bdcheck(){
+       if(document.form1.keywords.value==""){
+         alert("请输入关键词");
+         return false;
+       }
+       return true;
+     }
+   </script>
+</head>
+<body>
+	<div class="header">
+		<div class="search"><form name="form1" onsubmit="return bdcheck();" action=""><input name="keywords" type="text" class="search-keyword"><button type=submit  name="I1" class="search-submit"></button></form></div>
+	</div>
+	<div class="nav_box">
+		<div class="nav">
+			<ul>
+				<li><a href="#">食品概况</a></li>
+				<li class="ge"></li>
+				<li><a href="#">旗般配置</a></li>
+				<li class="ge"></li>
+				<li><a href="#">营养成分</a></li>
+				<li class="ge"></li>
+				<li><a href="#">设计特色</a></li>
+				<li class="ge"></li>
+				<li><a href="#">版本比较</a></li>
+				<li class="ge"></li>
+				<li><a href="#">口碑评价</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="clearfloat"></div>
+	<div class="wrap bg1">
+		<div class="banner_box">
+			<div id="box"></div>
+		</div>
+	</div>
+	<div class="wrap bg2">
+		<div class="wrap_box">
+			<div class="art_box fl">
+				<div class="pubtit"><a href=""></a><span>独家优势</span></div>
+				<p><img src="images/p1.jpg"></p>
+				<p><a href="">» 现磨绿豆面数量定制鸡蛋双油条面酱精选葱花</a></p>
+				<p><img src="images/dot.jpg"></p>
+			</div>
+			<div class="art_box fr">
+				<div class="pubtit"><a href=""></a><span>热点新闻</span></div>
+				<div class="news_box">
+					<div class="date">2020<br>12-01</div>
+					<div class="news">
+						来套煎饼果子，加十个鸡蛋 no problem
+					</div>
+				</div>
+				<div class="news_box">
+					<div class="date">2020<br>12-01</div>
+					<div class="news">
+						著名民谣：哟哟切克闹，煎饼果子来一套
+					</div>
+				</div>
+				<div class="news_box">
+					<div class="date">2020<br>06-01</div>
+					<div class="news">
+						首席运营官：煎饼果子 醇厚回味 • 由此定义
+					</div>
+				</div>
+				
+				<p><img src="images/dot.jpg"></p>
+			</div>
+			<div class="art_box" style="margin:0 0 0 322px;">
+				<div class="pubtit"><a href=""></a><span>百年传承</span></div>
+				<p><img src="images/p2.jpg"></p>
+				<p><a href="">» 精选原料良心推荐百年传承京城美食诚选产品</a></p>
+				<p><img src="images/dot.jpg"></p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="foot">
+			<a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+			<div class="footnav">
+				<a>友情链接：</a>
+				<a href="https://www.meishichina.com/">美食天下</a>
+				<a href="https://www.meishij.net/">美食杰</a>
+				
+			</div>
+			<p>总机：1234-567-789 Copyright ©煎饼果子 <br>ICP备25029843996974号 </p>
+		</div>
+	</div>
+</body>
+</html>
